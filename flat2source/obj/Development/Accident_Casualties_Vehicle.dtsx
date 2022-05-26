@@ -1,0 +1,3000 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/10/2021 11:23:38 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-4ATVFV8"
+  DTS:CreatorName="DESKTOP-4ATVFV8\Khoa MinHi"
+  DTS:DTSID="{E89D2F02-CF2C-402A-A880-148EE9C29829}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Accident_Casualties_Vehicle"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{E3CB62A7-C458-4F39-8851-E0268523A945}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[casualty]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A6081AD1-3DB8-403D-BE39-4AC6F8E242C2}"
+      DTS:ObjectName="casualty">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\HK-VII_English\BI\TH\data\Casualties1114.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Index"
+              DTS:DTSID="{9201F0B4-8D83-4F91-9FE7-11BB7D04FB41}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Reference"
+              DTS:DTSID="{F49FD2E9-76FE-4635-AD61-BB18BB71B40E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Reference"
+              DTS:DTSID="{68F667D9-67A3-43E1-B5F9-F62DCB4D3E29}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Class"
+              DTS:DTSID="{EE941917-540C-4D22-ACF0-CA2BED7C483E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sex_of_Casualty"
+              DTS:DTSID="{44ADFEAF-EAC9-4E78-A5BC-0BE3595F63F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_of_Casualty"
+              DTS:DTSID="{7ABD5CFB-BD89-4A66-BCA5-C4278D54C350}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_Band_of_Casualty"
+              DTS:DTSID="{221664AB-B7D0-4BCF-9BD7-CBABC09CDD9B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Severity"
+              DTS:DTSID="{A99DEC34-1E78-4676-884A-A2162F0DABA9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Location"
+              DTS:DTSID="{E4AC798F-219F-4820-81D3-73FB8DC7F684}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Movement"
+              DTS:DTSID="{5A7A2C93-553E-4F0C-A565-8D1C3823222E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Car_Passenger"
+              DTS:DTSID="{EE8596F9-C63E-4FAA-9E9D-14DFAE14ED6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bus_or_Coach_Passenger"
+              DTS:DTSID="{9494E532-3DA3-41E1-952A-8155BC928A88}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Road_Maintenance_Worker"
+              DTS:DTSID="{A9DC95C2-926F-4BAE-94C7-E4548BA26DA6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Type"
+              DTS:DTSID="{6CDAFBD3-4EDC-40D1-8EE8-7DD1EE99E7AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Home_Area_Type"
+              DTS:DTSID="{B4FB1A06-7394-49EF-82D4-2DEFF3CC64B1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager Accident]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{698B7192-BF5C-4C7C-8FD2-AB99E3F87E7D}"
+      DTS:ObjectName="Flat File Connection Manager Accident">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\HK-VII_English\BI\TH\data\Accidents1114.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Index"
+              DTS:DTSID="{A959A8D1-BD0C-42B3-B36C-370E69AFACEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location_Easting_OSGR"
+              DTS:DTSID="{1AD48C0B-488C-4CEA-9299-0C21D0DD3037}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location_Northing_OSGR"
+              DTS:DTSID="{5BC76DFA-4057-41C7-956D-37B552FF262F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{8895FD41-A67F-460A-ADCD-3BC55028C301}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{AEB530E7-C2D1-4558-ABF9-F5A0D6A7DC76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Police_Force"
+              DTS:DTSID="{6584F38A-E023-43B1-951E-04A366E37143}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Severity"
+              DTS:DTSID="{8D7AF0B9-182C-4564-9315-70952C0AE1B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_Vehicles"
+              DTS:DTSID="{9D819D80-AA8F-419E-9BB1-7802B6C85FE3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_Casualties"
+              DTS:DTSID="{9215379E-A731-49B3-866D-76009E7E1ED5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{F834052E-EE06-4781-BE80-7F099F584CD4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Day_of_Week"
+              DTS:DTSID="{D5B3B2AD-8761-42C5-B8AA-4076D414ED41}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time"
+              DTS:DTSID="{8CF3F3B8-51A0-4F25-B3FD-3C5D9E6214F1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Local_Authority_(District)"
+              DTS:DTSID="{C8A4C2C4-24CF-4969-8014-EB632A79850A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Local_Authority_(Highway)"
+              DTS:DTSID="{18EA9157-7823-4768-9688-B551B4AD8DDE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1st_Road_Class"
+              DTS:DTSID="{DE1213CE-B395-4821-855A-A3FDB9C607F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1st_Road_Number"
+              DTS:DTSID="{4037C0BD-5434-4BCC-8113-D48BFD950A5B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Road_Type"
+              DTS:DTSID="{46779402-719E-4406-9D43-EBB22255135C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Speed_limit"
+              DTS:DTSID="{FC376E80-AF7B-4FA6-AD45-5D81664E7DB8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Junction_Detail"
+              DTS:DTSID="{671276C8-972D-46AD-BADE-EAB2B0C2861E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Junction_Control"
+              DTS:DTSID="{B0551FD8-6B89-4822-8CF3-ED08EECA5A6B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="2nd_Road_Class"
+              DTS:DTSID="{679778E8-A34E-4505-B91D-FCD0F626EA6B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="2nd_Road_Number"
+              DTS:DTSID="{0DD259CC-C915-4DDB-8283-6669D265CF45}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Crossing-Human_Control"
+              DTS:DTSID="{AA7F7265-4188-4864-BC95-C35ACAD8285D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Crossing-Physical_Facilities"
+              DTS:DTSID="{5C195F1B-D73C-43D7-A51D-E4491396BBE3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Light_Conditions"
+              DTS:DTSID="{74B2F4FD-1707-4181-B178-21FCAB6D5CA5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weather_Conditions"
+              DTS:DTSID="{45DAE794-68D9-48AA-AFFD-A866FEC90F01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Road_Surface_Conditions"
+              DTS:DTSID="{ADBB6AB6-8C83-4210-A135-9A52669B6AA4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Special_Conditions_at_Site"
+              DTS:DTSID="{818FA8B4-A108-478E-AB34-291ACA0F9738}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Carriageway_Hazards"
+              DTS:DTSID="{2625F511-3F3B-4210-9A66-F7EE7DA42C00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Urban_or_Rural_Area"
+              DTS:DTSID="{263D9710-80F7-4786-B5E8-27CAAD8813B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Did_Police_Officer_Attend_Scene_of_Accident"
+              DTS:DTSID="{D9D6960B-A187-4D1C-B8EF-E8A3C46B9F7F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LSOA_of_Accident_Location"
+              DTS:DTSID="{39F15BD9-FD38-4038-BF8F-5C01F8F8F0B1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager Vehicle]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{19C3E1F6-B2B1-4E97-9504-0C16299B95FF}"
+      DTS:ObjectName="Flat File Connection Manager Vehicle">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\HK-VII_English\BI\TH\data\Vehicles1114.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Index"
+              DTS:DTSID="{5464FB4B-FF61-4ADA-8626-E0B7BFEC9BEA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Reference"
+              DTS:DTSID="{3EC35B9E-F2DE-43F1-B663-0ABCFA169103}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Type"
+              DTS:DTSID="{2F357811-C56F-4A08-9AF9-F624EF6A532B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Towing_and_Articulation"
+              DTS:DTSID="{6F62353C-CF93-4F24-86D7-87A71F3DDCD4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Manoeuvre"
+              DTS:DTSID="{6D90C045-2EAE-438F-BB26-56C929D5362E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Location-Restricted_Lane"
+              DTS:DTSID="{157F9103-CE83-4E83-B177-145DA3005348}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Junction_Location"
+              DTS:DTSID="{72B29778-D4D0-413A-8F45-018AB25913B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Skidding_and_Overturning"
+              DTS:DTSID="{1962715D-B97A-4217-9783-FC9F5B54F273}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hit_Object_in_Carriageway"
+              DTS:DTSID="{9156EF0B-68EE-4F7F-95E3-1BA526958BB5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Leaving_Carriageway"
+              DTS:DTSID="{7CC480F6-01D0-404D-AAB5-381904959F69}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hit_Object_off_Carriageway"
+              DTS:DTSID="{77C75FD9-D5D0-4BCE-80D8-F7862CC271FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1st_Point_of_Impact"
+              DTS:DTSID="{E56655C7-AFDE-4B03-A47F-774C62167C34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Was_Vehicle_Left_Hand_Drive?"
+              DTS:DTSID="{5A489A2A-8928-4359-AA7A-9E25B6279096}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Journey_Purpose_of_Driver"
+              DTS:DTSID="{E53DE706-CF65-4D68-A01D-AF2658468F7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sex_of_Driver"
+              DTS:DTSID="{5CD8DBF4-7021-49A9-B657-5373B7241CE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_of_Driver"
+              DTS:DTSID="{90AA2E1E-EC12-4D3B-8CD0-C8F257A67A8A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_Band_of_Driver"
+              DTS:DTSID="{69D66E95-D1D1-407D-91F7-4E6680536814}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Engine_Capacity_(CC)"
+              DTS:DTSID="{82AE2449-B13C-4575-91E7-FFB088E54E36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Propulsion_Code"
+              DTS:DTSID="{AE02CB71-1273-4D9B-A71F-DE8B19E51886}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_of_Vehicle"
+              DTS:DTSID="{0DFD99A7-2783-4265-BFBD-2D3F6F9F3418}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Driver_IMD_Decile"
+              DTS:DTSID="{3BB1AC7B-962F-4480-9329-A8657A520250}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Driver_Home_Area_Type"
+              DTS:DTSID="{91188C98-9B91-4EAA-9B43-49995882A122}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.TH_METADATA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B7E7BBA3-042F-47CA-8D45-FF52D5B86277}"
+      DTS:ObjectName="LocalHost.TH_METADATA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=TH_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.TH_STAGE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{857624AA-CF03-4F81-8491-0D2CA3FD34C6}"
+      DTS:ObjectName="LocalHost.TH_STAGE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=TH_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5CDB0E8C-A56D-4416-BB9C-6640A93DD608}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CET">
+      <DTS:VariableValue
+        DTS:DataType="8">201101BS70001</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{24638F14-F925-43B0-8947-7CF5F4C97B8E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSET">
+      <DTS:VariableValue
+        DTS:DataType="8">201101BS70001</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3CB5BDA8-1696-4B59-A6AB-2C6472A72874}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\accident flat file"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="accident flat file"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\accident flat file.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager Accident]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager Accident]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      name="Accident_Index"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Accident_Severity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Accident_Severity]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Accident_Severity]"
+                      name="Accident_Severity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Number_of_Vehicles]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Number_of_Vehicles]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Number_of_Vehicles]"
+                      name="Number_of_Vehicles"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Number_of_Casualties]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Number_of_Casualties]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Number_of_Casualties]"
+                      name="Number_of_Casualties"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Time]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Time]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Time]"
+                      name="Time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Road_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Road_Type]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Road_Type]"
+                      name="Road_Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Speed_limit]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Speed_limit]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Speed_limit]"
+                      name="Speed_limit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Light_Conditions]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Light_Conditions]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Light_Conditions]"
+                      name="Light_Conditions"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Weather_Conditions]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Weather_Conditions]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Weather_Conditions]"
+                      name="Weather_Conditions"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Road_Surface_Conditions]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Road_Surface_Conditions]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Road_Surface_Conditions]"
+                      name="Road_Surface_Conditions"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Special_Conditions_at_Site]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Special_Conditions_at_Site]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Special_Conditions_at_Site]"
+                      name="Special_Conditions_at_Site"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Carriageway_Hazards]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Carriageway_Hazards]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Carriageway_Hazards]"
+                      name="Carriageway_Hazards"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Urban_or_Rural_Area]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Urban_or_Rural_Area]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Urban_or_Rural_Area]"
+                      name="Urban_or_Rural_Area"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[LSOA_of_Accident_Location]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[LSOA_of_Accident_Location]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[LSOA_of_Accident_Location]"
+                      name="LSOA_of_Accident_Location"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(District)]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]"
+                      name="Local_Authority_(District)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Location_Easting_OSGR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Location_Easting_OSGR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Location_Northing_OSGR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Location_Northing_OSGR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Police_Force]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Police_Force" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Accident_Severity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Accident_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Number_of_Vehicles]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Number_of_Vehicles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Number_of_Casualties]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Number_of_Casualties" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      dataType="date"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Day_of_Week]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Day_of_Week" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Time]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Time" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(District)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Local_Authority_(District)" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(Highway)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Local_Authority_(Highway)" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[1st_Road_Class]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="1st_Road_Class" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[1st_Road_Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="1st_Road_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Road_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Road_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Speed_limit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Speed_limit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Junction_Detail]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Junction_Detail" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Junction_Control]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Junction_Control" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[2nd_Road_Class]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="2nd_Road_Class" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[2nd_Road_Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="2nd_Road_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Crossing-Human_Control]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Pedestrian_Crossing-Human_Control" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Crossing-Physical_Facilities]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Pedestrian_Crossing-Physical_Facilities" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Light_Conditions]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Light_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Weather_Conditions]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Weather_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Road_Surface_Conditions]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Road_Surface_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Special_Conditions_at_Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Special_Conditions_at_Site" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Carriageway_Hazards]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Carriageway_Hazards" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Urban_or_Rural_Area]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Urban_or_Rural_Area" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[Did_Police_Officer_Attend_Scene_of_Accident]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Did_Police_Officer_Attend_Scene_of_Accident" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].ExternalColumns[LSOA_of_Accident_Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LSOA_of_Accident_Location" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\accident stage"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="accident stage"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Accident]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\accident stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.TH_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.TH_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Accident_Severity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Severity"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Severity]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Accident_Severity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Number_of_Vehicles]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Number_of_Vehicles"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Vehicles]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Number_of_Vehicles]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Number_of_Casualties]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Number_of_Casualties"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Casualties]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Number_of_Casualties]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Time"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Time]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Local_Authority_(District)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Local_Authority_(District)"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(District)]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Road_Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Road_Type"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Road_Type]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Road_Type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Speed_limit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Speed_limit"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Speed_limit]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Speed_limit]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Light_Conditions]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Light_Conditions"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Light_Conditions]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Light_Conditions]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Weather_Conditions]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Weather_Conditions"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Weather_Conditions]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Weather_Conditions]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Road_Surface_Conditions]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Road_Surface_Conditions"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Road_Surface_Conditions]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Road_Surface_Conditions]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Special_Conditions_at_Site]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Special_Conditions_at_Site"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Special_Conditions_at_Site]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Special_Conditions_at_Site]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Carriageway_Hazards]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Carriageway_Hazards"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Carriageway_Hazards]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Carriageway_Hazards]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[Urban_or_Rural_Area]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Urban_or_Rural_Area"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[Urban_or_Rural_Area]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].Columns[LSOA_of_Accident_Location]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LSOA_of_Accident_Location"
+                      externalMetadataColumnId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[LSOA_of_Accident_Location]"
+                      lineageId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output].Columns[LSOA_of_Accident_Location]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Severity]"
+                      dataType="i4"
+                      name="Accident_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Vehicles]"
+                      dataType="i4"
+                      name="Number_of_Vehicles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Casualties]"
+                      dataType="i4"
+                      name="Number_of_Casualties" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
+                      dataType="dbTime2"
+                      name="Time"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(District)]"
+                      dataType="i4"
+                      name="Local_Authority_(District)" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Road_Type]"
+                      dataType="i4"
+                      name="Road_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Speed_limit]"
+                      dataType="i4"
+                      name="Speed_limit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Light_Conditions]"
+                      dataType="i4"
+                      name="Light_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Weather_Conditions]"
+                      dataType="i4"
+                      name="Weather_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Road_Surface_Conditions]"
+                      dataType="i4"
+                      name="Road_Surface_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Special_Conditions_at_Site]"
+                      dataType="i4"
+                      name="Special_Conditions_at_Site" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Carriageway_Hazards]"
+                      dataType="i4"
+                      name="Carriageway_Hazards" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area]"
+                      dataType="i4"
+                      name="Urban_or_Rural_Area" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input].ExternalColumns[LSOA_of_Accident_Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="LSOA_of_Accident_Location" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\accident stage.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\accident stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\accident stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\accident stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\casualty flat file"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="casualty flat file"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\casualty flat file.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[casualty]"
+                  connectionManagerRefId="Package.ConnectionManagers[casualty]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      name="Accident_Index"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      name="Vehicle_Reference"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Casualty_Reference]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Casualty_Reference]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Casualty_Reference]"
+                      name="Casualty_Reference"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Casualty_Class]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Casualty_Class]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Casualty_Class]"
+                      name="Casualty_Class"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Sex_of_Casualty]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Casualty]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Sex_of_Casualty]"
+                      name="Sex_of_Casualty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Age_of_Casualty]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Age_of_Casualty]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Age_of_Casualty]"
+                      name="Age_of_Casualty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Age_Band_of_Casualty]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Casualty]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Age_Band_of_Casualty]"
+                      name="Age_Band_of_Casualty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Casualty_Severity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Casualty_Severity]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Casualty_Severity]"
+                      name="Casualty_Severity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Casualty_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Casualty_Type]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Casualty_Type]"
+                      name="Casualty_Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Casualty_Reference]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Casualty_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Casualty_Class]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Casualty_Class" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Casualty]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sex_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Age_of_Casualty]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Casualty]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age_Band_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Casualty_Severity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Casualty_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Pedestrian_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Movement]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Pedestrian_Movement" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Car_Passenger]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Car_Passenger" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Bus_or_Coach_Passenger]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Bus_or_Coach_Passenger" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Road_Maintenance_Worker]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Pedestrian_Road_Maintenance_Worker" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Casualty_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Casualty_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].ExternalColumns[Casualty_Home_Area_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Casualty_Home_Area_Type" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Casualties]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.TH_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.TH_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Vehicle_Reference]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Vehicle_Reference"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Vehicle_Reference]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Casualty_Reference]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Casualty_Reference"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Reference]"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Casualty_Reference]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Casualty_Class]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Casualty_Class"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Class]"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Casualty_Class]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sex_of_Casualty]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sex_of_Casualty"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Casualty]"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Sex_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Age_of_Casualty]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age_of_Casualty"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Casualty]"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Age_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Age_Band_of_Casualty]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age_Band_of_Casualty"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Casualty]"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Age_Band_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Casualty_Severity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Casualty_Severity"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Severity]"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Casualty_Severity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Casualty_Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Casualty_Type"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type]"
+                      lineageId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output].Columns[Casualty_Type]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      dataType="i4"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Reference]"
+                      dataType="i4"
+                      name="Casualty_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Class]"
+                      dataType="i4"
+                      name="Casualty_Class" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Casualty]"
+                      dataType="i4"
+                      name="Sex_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Casualty]"
+                      dataType="i4"
+                      name="Age_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Casualty]"
+                      dataType="i4"
+                      name="Age_Band_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Severity]"
+                      dataType="i4"
+                      name="Casualty_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type]"
+                      dataType="i4"
+                      name="Casualty_Type" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Vehicle]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.TH_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.TH_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Vehicle_Reference]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Vehicle_Reference"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Vehicle_Reference]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Vehicle_Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Vehicle_Type"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Vehicle_Type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Journey_Purpose_of_Driver]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Journey_Purpose_of_Driver"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Journey_Purpose_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Sex_of_Driver]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sex_of_Driver"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Driver]"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Sex_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Age_of_Driver]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age_of_Driver"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Age_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Age_of_Vehicle]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age_of_Vehicle"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Vehicle]"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      dataType="i4"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
+                      dataType="i4"
+                      name="Vehicle_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
+                      dataType="i4"
+                      name="Journey_Purpose_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Driver]"
+                      dataType="i4"
+                      name="Sex_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
+                      dataType="i4"
+                      name="Age_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Vehicle]"
+                      dataType="i4"
+                      name="Age_of_Vehicle" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Vehicle flat file"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Vehicle flat file"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Vehicle flat file.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager Vehicle]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager Vehicle]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      name="Accident_Index"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      name="Vehicle_Reference"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Vehicle_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Type]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Vehicle_Type]"
+                      name="Vehicle_Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Journey_Purpose_of_Driver]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Journey_Purpose_of_Driver]"
+                      name="Journey_Purpose_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Sex_of_Driver]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Driver]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Sex_of_Driver]"
+                      name="Sex_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Age_of_Driver]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Age_of_Driver]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Age_of_Driver]"
+                      name="Age_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Age_of_Vehicle]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]"
+                      name="Age_of_Vehicle"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Vehicle_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Towing_and_Articulation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Towing_and_Articulation" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Manoeuvre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Vehicle_Manoeuvre" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Vehicle_Location-Restricted_Lane" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Junction_Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Junction_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Skidding_and_Overturning]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Skidding_and_Overturning" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Hit_Object_in_Carriageway]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Hit_Object_in_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Vehicle_Leaving_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Hit_Object_off_Carriageway]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Hit_Object_off_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[1st_Point_of_Impact]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="1st_Point_of_Impact" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Was_Vehicle_Left_Hand_Drive?" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Journey_Purpose_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Driver]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sex_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Age_of_Driver]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Driver]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age_Band_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Engine_Capacity_(CC)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Engine_Capacity_(CC)" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Propulsion_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Propulsion_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Age_of_Vehicle]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Age_of_Vehicle" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Driver_IMD_Decile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Driver_IMD_Decile" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output].ExternalColumns[Driver_Home_Area_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Driver_Home_Area_Type" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\accident stage.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\accident flat file.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output1]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\casualty flat file.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output2]"
+              endId="Package\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Vehicle flat file.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\truncate Accident, Casualties, Vehicle table in Stage"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{F1D0846B-6970-42A4-8634-EF6C7340A610}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="truncate Accident, Casualties, Vehicle table in Stage"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{857624AA-CF03-4F81-8491-0D2CA3FD34C6}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Accident; TRUNCATE TABLE Casualties; TRUNCATE TABLE Vehicle;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{189D66E4-FE6F-4368-8491-CE16F1869018}"
+      DTS:From="Package\truncate Accident, Casualties, Vehicle table in Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="197.357142990949,169.770589854726" />
+        <NodeLayout
+          Size="322.4,41.6"
+          Id="Package\truncate Accident, Casualties, Vehicle table in Stage"
+          TopLeft="113.071427269858,71.1235296477083" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="273.414285130404,112.723529647708">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.0470602070175"
+              Start="0,0"
+              End="0,49.5470602070175">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5470602070175" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="147.2,41.6"
+          Id="Package\Data Flow Task\Vehicle flat file"
+          TopLeft="494.28572270335,31.3529416161838" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="263.571433060023,131.529413609356" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Data Flow Task\casualty flat file"
+          TopLeft="275.714290409672,36.7058828677274" />
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\Data Flow Task\accident stage"
+          TopLeft="81.4285728152919,123.117648785502" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination 1"
+          TopLeft="480.000008174352,128.470590037046" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Data Flow Task\accident flat file"
+          TopLeft="85.0000014475416,34.4117651884944" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
+          TopLeft="350.242861734848,78.3058828677274">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.2235307416289"
+              Start="0,0"
+              End="0,45.7235307416289">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.7235307416289" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="158.014287131417,76.0117651884944">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.1058835970079"
+              Start="0,0"
+              End="0,39.6058835970079">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.6058835970079" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output2]"
+          TopLeft="568.742865438851,72.9529416161838">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.5176484208618"
+              Start="0,0"
+              End="0,48.0176484208618">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.0176484208618" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\accident stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

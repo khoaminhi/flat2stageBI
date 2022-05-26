@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "flat2source", "flat2source\flat2source.dtproj", "{D6BA0B5C-DE2B-43EE-993C-8E9F19202B5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6BA0B5C-DE2B-43EE-993C-8E9F19202B5F}.Development|Default.ActiveCfg = Development
+		{D6BA0B5C-DE2B-43EE-993C-8E9F19202B5F}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {480368BA-7EA0-4664-ABD1-02E99CB0CED6}
+	EndGlobalSection
+EndGlobal
